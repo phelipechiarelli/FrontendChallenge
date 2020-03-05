@@ -1,0 +1,62 @@
+<div class="fadeIn">
+  <section class="viewport-10">
+    <app-tournament-navbar></app-tournament-navbar>
+  </section>
+  <section class="viewport-90">
+    <div class="content">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto align-middle pt-5">
+        <div class="card border-dark rounded-0">
+          <div class="card-header header rounded-0">
+            <h2>Include the team</h2>
+          </div>
+          <div class="card-body">
+            <div class="text-center">
+              <form [formGroup]="crudForm" (ngSubmit)="includeTeam()">
+                <div class="form-group">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="teamName">Team name</label>
+                    </div>
+                    <input type="text" class="form-control" id="teamName" placeholder="Team name"
+                      formControlName="teamName">
+                  </div>
+                  <div *ngIf="!crudTeamName.pristine && crudTeamName.errors">
+                    <p *ngIf="crudTeamName.errors.required" class="text-danger">
+                      The team name is required.
+                    </p>
+                    <p *ngIf="crudTeamName.errors.minlength" class="text-danger">
+                      The team name must have 3 characters, at least.
+                    </p>
+                    <p *ngIf="crudTeamName.errors.maxlength" class="text-danger">
+                      The team name exceed 50 characters.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="teamRealm">Choose a region</label>
+                  </div>
+                  <select class="custom-select" id="teamRealm" formControlName="teamRealm">
+                    <option value="" disabled>Choose a region</option>
+                    <option value="{{reg}}" *ngFor="let reg of teamRealm">{{reg}}</option>
+
+                  </select>
+
+                </div>
+
+                <button [disabled]="!crudForm.valid || this.counter === 16 " type="submit" class="btn btn-primary m-1">
+                  Save
+                </button>
+
+              </form>
+              <p *ngIf="this.counter === 16" class="text-danger">
+                The maximum number of teams allowed is 16.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

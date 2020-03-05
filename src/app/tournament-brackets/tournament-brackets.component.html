@@ -1,0 +1,130 @@
+<div class="fadeIn">
+  <section class="viewport-10">
+    <app-tournament-navbar></app-tournament-navbar>
+  </section>
+
+<div class="tournament-container">
+  <div class="tournament-headers">
+    <h3>Teams<button class="btn btn-sm btn-outline-info rounded-circle m-2 help" data-toggle="modal" data-target="#tournamentaModal">
+    ?</button></h3>
+    <h3>Round of 16</h3>
+    <h3>Quarter-Finals</h3>
+    <h3>Semi-Finals</h3>
+    <h3>Final</h3>
+    <h3>Winner</h3>
+  </div>
+
+  <div class="tournament-brackets">
+    <ul class="bracket-alt" id="TEAMS">
+      <div id="teamsDiv" class="d-flex flex-column teamsDiv bd-highlight" dragula="TOURNAMENT">
+        <div class="team-item" *ngFor="let team of teamArray">
+          {{team.teamName}}</div>
+      </div>
+    </ul>
+    <ul class="bracket bracket-1" id="ROUND_16">
+      <div class="card border-primary rounded-0 m-2" id="G1">
+        <div class="card-header text-center blue-header">GROUP 1</div>
+        <div class="card-body teamsDiv" dragula="TOURNAMENT"></div>
+      </div>
+
+      <div class="card border-primary rounded-0 m-2" id="G2">
+        <div class="card-header text-center blue-header">GROUP 2</div>
+        <div class="card-body teamsDiv" dragula="TOURNAMENT"></div>
+      </div>
+
+      <div class="card border-primary rounded-0 m-2" id="G3">
+        <div class="card-header text-center blue-header">GROUP 3</div>
+        <div class="card-body teamsDiv" dragula="TOURNAMENT"></div>
+      </div>
+
+      <div class="card border-primary rounded-0 m-2" id="G4">
+        <div class="card-header text-center blue-header">GROUP 4</div>
+        <div class="card-body teamsDiv" dragula="TOURNAMENT"></div>
+      </div>
+
+      <div class="card border-primary rounded-0 m-2" id="G5">
+        <div class="card-header text-center blue-header">GROUP 5</div>
+        <div class="card-body teamsDiv" dragula="TOURNAMENT"></div>
+      </div>
+
+      <div class="card border-primary rounded-0 m-2" id="G6">
+        <div class="card-header text-center blue-header">GROUP 6</div>
+        <div class="card-body teamsDiv" dragula="TOURNAMENT"></div>
+      </div>
+
+      <div class="card border-primary rounded-0 m-2" id="G7">
+        <div class="card-header text-center blue-header">GROUP 7</div>
+        <div class="card-body teamsDiv" dragula="TOURNAMENT"></div>
+      </div>
+
+      <div class="card border-primary rounded-0 m-2" id="G8">
+        <div class="card-header text-center blue-header">GROUP 8</div>
+        <div class="card-body teamsDiv" dragula="TOURNAMENT"></div>
+      </div>
+    </ul>
+
+    <ul class="bracket bracket-2" id="QUARTER_FINALS">
+      <div class="card border-primary rounded-0 m-2" id="QF1">
+        <div class="card-header text-center blue-header">QF1</div>
+        <div class="card-body teamsDiv" dragula="TOURNAMENT"></div>
+      </div>
+      <div class="card border-primary rounded-0 m-2" id="QF2">
+        <div class="card-header text-center blue-header">QF2</div>
+        <div class="card-body teamsDiv" dragula="TOURNAMENT"></div>
+      </div>
+      <div class="card border-primary rounded-0 m-2" id="QF3">
+        <div class="card-header text-center blue-header">QF3</div>
+        <div class="card-body teamsDiv" dragula="TOURNAMENT"></div>
+      </div>
+      <div class="card border-primary rounded-0 m-2" id="QF4">
+        <div class="card-header text-center blue-header">QF4</div>
+        <div class="card-body teamsDiv" dragula="TOURNAMENT"></div>
+      </div>
+
+    </ul>
+    <ul class="bracket bracket-3" id="SEMI_FINALS">
+      <div class="card border-primary rounded-0 m-2" id="SF1">
+        <div class="card-header text-center blue-header">SF1</div>
+        <div class="card-body teamsDiv" dragula="TOURNAMENT"></div>
+      </div>
+      <div class="card border-primary rounded-0 m-2" id="SF2">
+        <div class="card-header text-center blue-header">SF2</div>
+        <div class="card-body teamsDiv" dragula="TOURNAMENT"></div>
+      </div>
+
+    </ul>
+    <ul class="bracket bracket-4" id="FINAL">
+      <div class="card border-primary rounded-0 m-2" id="F1">
+        <div class="card-header text-center blue-header">FINAL</div>
+        <div class="card-body teamsDiv" dragula="TOURNAMENT"></div>
+      </div>
+
+    </ul>
+    <ul class="bracket bracket-5" id="WINNER">
+      <div class="card rounded-0 bg-transparent m-2 border-primary" id="WIN">
+        <img id="imgVictory" class="card-img-top bg-transparent" src="../../assets/img/17-171263_png-victory-transparent-league-of-legend-victory.png">
+        <div class="card-body teamsDiv" dragula="TOURNAMENT"></div>
+      </div>
+    </ul>
+
+    <div class="modal fade" id="tournamentaModal" tabindex="-1" role="dialog" aria-labelledby="clearDataModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Need help?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">         
+              <h3>Drag and drop the team box from the "Teams" column to the group bracket, when the tournament results have been revealed.</h3>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Okay!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

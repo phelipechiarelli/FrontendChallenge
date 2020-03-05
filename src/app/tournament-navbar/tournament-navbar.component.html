@@ -1,0 +1,45 @@
+<nav class="navbar navbar-dark fixed-top bg-dark">
+  <span class="navbar-brand">
+    <img class="d-inline-block align-top" src="../../assets/img/Runeterra_Crest_icon.png" height="30" width="30">
+    Ye olde Valoran tournament controller
+  </span>
+  <form class="form-inline mr-5">
+    <button class="btn btn-outline-secondary rounded-0 m-1" type="button" (click)="back()">Home</button>
+    <button class="btn btn-outline-secondary rounded-0 m-1" type="button" (click)="goCrudTournament()">Include team</button>
+    <button class="btn btn-outline-secondary rounded-0 m-1" type="button" (click)="goTeamTournament()">View teams</button>
+    <button class="btn btn-outline-secondary rounded-0 m-1" type="button" (click)="gobracketsTournament()">Tournament</button>
+
+    <div class="btn-group ml-2" role="group">
+      <button id="btnGroupDrop1" type="button" class="btn btn-outline-danger dropdown-toggle rounded-0"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Admin
+      </button>
+      <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+        <button class="btn btn-sm dropdown-item text-dark" data-toggle="modal" data-target="#clearDataModal">Clear data</button>
+      </div>
+    </div>
+  </form>
+</nav>
+
+<!-- ye olde modal -->
+
+<div class="modal fade" id="clearDataModal" tabindex="-1" role="dialog" aria-labelledby="clearDataModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Clear data</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          HALT! Are you really sure to delete all teams data?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-outline-dark" (click)="clearData()" data-dismiss="modal">Yes, clear all data.</button>
+        </div>
+      </div>
+    </div>
+  </div>
+

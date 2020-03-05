@@ -1,0 +1,217 @@
+html {
+  font-family: 'Della Respira', serif !important;
+  background-color: #1e1e1f;
+}
+
+body {
+  margin: 0;
+  background-color: #1e1e1f;
+  padding: 0;
+  max-height: fit-content;
+}
+
+.tournament-headers {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: 1px solid #ccc;
+  background-color: #333358;
+
+  h3 {
+    width: 25%;
+    text-align: center;
+    font-weight: 300;
+    border-right: 1px dashed #ccc;
+    margin: 0;
+    padding: 1rem;
+    font-family: 'Della Respira', serif;
+    font-weight: 700;
+    color: #FFD700;
+    text-align: center;
+
+  }
+}
+
+.tournament-brackets {
+
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  background-color: #1e1e1f;
+}
+
+.bracket {
+  padding-left: 0;
+  display: flex;
+  margin: 0;
+  padding: 10px 0;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style-type: none;
+  border-right: 1px dashed #ccc;
+  flex: 1;
+  font-family: 'Della Respira', serif;
+  color: #FFD700;
+}
+
+.bracket-alt {
+  padding-left: 0;
+  display: flex;
+  margin: 0;
+  padding: 10px 0;
+  flex-grow: 1;
+  justify-content: space-around;  
+  flex-direction: column;
+  list-style-type: none;
+  border-right: 1px dashed #ccc;
+  flex: 1;
+
+}
+
+.blue-header {
+  background-color: #333358 !important;
+}
+
+.teamsDiv{
+  align-self: center;
+}
+
+div > .modal {
+  font-family: 'Della Respira', serif; 
+  h3 {
+    font-weight: 300;
+  }
+}
+
+.help {
+  font-family: 'Della Respira', serif; 
+  font-weight: 300;
+}
+
+.team-item {
+  background-color: #333358 !important;
+  padding: .3rem;
+  display: block;
+  margin: .5rem 10px;
+  position: relative;
+  line-height: 2;
+  text-align: center;
+  font-size: 0.9rem;
+  font-family: 'Della Respira', serif;
+  color: #FFD700;
+  height: auto;
+  width: 120px;
+  word-wrap: break-word;
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+
+.team-item:nth-of-type(odd):after {
+  border-right-style: solid;
+  border-top-style: solid;
+  height: 100%;
+  top: 50%;
+}
+
+.team-item:nth-of-type(even):after {
+  border-right-style: solid;
+  border-bottom-style: solid;
+  height: 100%;
+  top: -50%;
+}
+
+
+.bracket-2 {
+  .team-item:nth-of-type(odd):after {
+    height: 200%;
+    top: 50%;
+  }
+
+  .team-item:nth-of-type(even):after {
+    height: 200%;
+    top: -150%;
+  }
+}
+
+.bracket-3 {
+  .team-item:nth-of-type(odd):after {
+    height: 350%;
+    top: 50%;
+  }
+
+  .team-item:nth-of-type(even):after {
+    height: 350%;
+    top: -300%;
+  }
+}
+
+.bracket-4 {
+  .team-item:nth-of-type(odd):after {
+    height: 700%;
+    top: 50%;
+  }
+
+  .team-item:nth-of-type(even):after {
+    height: 700%;
+    top: -650%;
+  }
+}
+
+.bracket:first-of-type {
+  .team-item:before {
+    display: none;
+  }
+}
+
+.bracket-4 {
+  .team-item:after {
+    display: none;
+  }
+}
+
+.bracket:last-of-type {
+
+  .team-item:before,
+  .team-item:after {
+    display: none;
+  }
+}
+
+
+// Dragula CSS
+
+/* in-flight clone */
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  pointer-events: none;
+}
+
+/* high-performance display:none; helper */
+.gu-hide {
+  left: -9999px !important;
+}
+
+/* added to mirrorContainer (default = body) while dragging */
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+/* added to the source element while its mirror is dragged */
+.gu-transit {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}

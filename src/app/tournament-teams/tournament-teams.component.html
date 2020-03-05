@@ -1,0 +1,51 @@
+<div class="fadeIn">
+  <section class="viewport-10">
+    <app-tournament-navbar></app-tournament-navbar>
+  </section>
+  <section class="viewport-90">
+    <div class="content">
+      <div class="col-xs-12 col-sm-12 col-md-11 col-lg-11 col-xl-11 mx-auto align-middle pt-3">
+        <div class="card main-card border-dark rounded-0 bg-transparent">
+          <div class="card-header header rounded-0">
+            <h3>Teams ready for the tournament</h3>
+          </div>
+          <div class="card-body bg-transparent">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 d-inline bg-transparent p-1"
+                *ngFor="let teams of teamArray">
+                <div id="teamCard" class="card border-primary rounded-0">
+                  <div class="card-header bg-dark rounded-0">
+                    <h6 class="card-title pt-2">{{teams.teamName}}</h6>
+                  </div>
+                  <span id="imgTeam" [ngSwitch]="teams.teamRealm">
+                    <img *ngSwitchCase="'Bandle City'" class="card-img-top" src='../../assets/img/1.png'>
+                    <img *ngSwitchCase="'Bilgewater'" class="card-img-top" src='../../assets/img/2.png'>
+                    <img *ngSwitchCase="'Demacia'" class="card-img-top" src='../../assets/img/3.png'>
+                    <img *ngSwitchCase="'Freljord'" class="card-img-top" src='../../assets/img/4.png'>
+                    <img *ngSwitchCase="'Ionia'" class="card-img-top" src='../../assets/img/5.png'>
+                    <img *ngSwitchCase="'Ixtal'" class="card-img-top" src='../../assets/img/6.png'>
+                    <img *ngSwitchCase="'Noxus'" class="card-img-top" src='../../assets/img/7.png'>
+                    <img *ngSwitchCase="'Piltover'" class="card-img-top" src='../../assets/img/8.png'>
+                    <img *ngSwitchCase="'Shadow Isles'" class="card-img-top" src='../../assets/img/9.png'>
+                    <img *ngSwitchCase="'Shurima'" class="card-img-top" src='../../assets/img/10.png'>
+                    <img *ngSwitchCase="'Targon'" class="card-img-top" src='../../assets/img/11.png'>
+                    <img *ngSwitchCase="'The Void'" class="card-img-top" src='../../assets/img/12.png'>
+                    <img *ngSwitchCase="'Zaun'" class="card-img-top" src='../../assets/img/13.png'>
+                  </span>
+                  <div class="card-body bg-dark">
+                    <p class="card-text text-center">Region of {{teams.teamRealm}}</p>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 d-inline bg-transparent p-1"
+                  *ngIf="teams.teamName === null">
+                  <h1 class="text-center">NO DATA</h1>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

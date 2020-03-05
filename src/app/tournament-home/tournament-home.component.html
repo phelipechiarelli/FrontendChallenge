@@ -1,0 +1,35 @@
+<div class="fadeIn">
+  <section class="viewport-10">
+    <app-tournament-navbar></app-tournament-navbar>
+  </section>
+
+  <section class="viewport-90 lol">
+    <div class="container pt-3">
+      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 mx-auto">
+        <div class="card border-dark rounded-0">
+          <div class="card-header header rounded-0">
+            <h4>Choose wisely your destination</h4>
+          </div>
+          <div class="card-body">
+            <div class="text-center">
+
+              <button type="button" class="btn btn-outline-primary btn-block m-1 rounded-0" (click)="goCrudTournament()">
+                Include a team
+              </button>
+
+              <button type="button" class="btn btn-outline-primary btn-block m-1 rounded-0" (click)="goTeamTournament()">
+                View team list
+              </button>
+
+              <button type="button" class="btn btn-outline-primary m-1 btn-block rounded-0" (click)="gobracketsTournament()">
+                Tournament brackets
+              </button>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
