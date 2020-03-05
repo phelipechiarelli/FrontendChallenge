@@ -1,65 +1,27 @@
-<p align="center"><img src="https://www.nibo.com.br/logo-nibo.png" width="150" /></p>
-<h1 align="center">Nibo Front-end Challenge - Level 1</h1>
+# ValoranTournament
 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
 
-<p align="center">Quer saber o por que vale a pena trabalhar no Nibo? <a href="https://tech.nibo.com.br">tech.nibo.com.br</a></p>
+## Development server
 
-Olá!
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Primeiramente, parabéns por ter avançado ao Desafio para Developers do Nibo! 
+## Code scaffolding
 
-## Quem somos
-O Nibo nasceu em 2012 com uma missão muito clara: ajudar empresas a gerir suas finanças de forma simples e responsável. Ao longo dos anos, percebemos que a única forma de alcançar esse objetivo seria com a ajuda de uma figura bastante esquecida no imaginário brasileiro - **contador**.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-Aqui no Nibo, não enxergamos o contador como o um "mal necessário", mas sim como **cientista da riqueza** - a pessoa com os poderes de ajudar seus clientes a prosperarem e alcançarem o sucesso. 
+## Build
 
-Traduzimos esse pensamento no nosso manifesto, que nunca deixamos de recitar: 
-> Todos os dias, 2000 empresas morrem no Brasil. Empresários precisam de ajuda. Bons contadores são a solução.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-Sendo assim, nosso papel é fornecer as ferramentas que aumentem a produtividade e efetividade do contador, de modo que ele tenha tempo para o que realmente importa: ser consultivo e entregar insights valiosos ao seu cliente.
+## Running unit tests
 
-A equipe de Produto e Tecnologia do Nibo é composta por times multifuncionais, com autonomia na tomada de decisão. São as famosas **squads**. Não sabe o que é squad? Assista ao vídeo [Spotify Engineering Culture](https://www.youtube.com/watch?v=hQDblYvY9RY). 
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-O desafio
--------------------------
-Bem vindo à Summoners Rift. 
+## Running end-to-end tests
 
-Você foi convocado a participar do mais empolgante desafio de sua vida: acabar com os intermináveis conflitos em Valoran. A nação humana de Demacia, o assombroso império de Noxus e os moradores de todas as cidades-estado aguardam ansiosamente por este momento.
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-Para isso ocorrerá um torneio onde o reino do vencedor terá o poder de controlar todos os outros em Valoran e precisamos que você desenvolva um sistema para gerenciar este torneio.
+## Further help
 
-Regras
--------------------------
-Os torneios tipicamente mata-mata são compostos por times e chaves, onde são gerados os vencedores de cada chave até chegar ao grande vencedor do torneio.
-Seu objetivo é criar um sistema onde é possível cadastrar os times e gerenciar o torneio até a fase final, onde poderemos eleger o vencedor.
-
-![Formato do torneio](torneio.jpeg)
-
-- Você deverá desenvolver uma solução em Javascript utilizando AngularJS. Você pode decidir sobre outras bibliotecas e tecnologias.
-- Queremos como resultado uma solução simples, legível e de qualidade. 
-- Código feito e comentado em **inglês** please.
-- Não utilize soluções prontas. Nós as conhecemos.
-- Seja criativo. Você decide quais funcionalidades irá incluir além dos requisitos.
-
-Pontos extras
--------------------------
-Você está livre para construir a solução com as tecnologias e conceitos que preferir. Mas você poderá ganhar pontos extras se:
-- Utilizar ES2015+ com Babel ou Typescript
-- Trocar o AngularJS por Angular 2+
-- Persistir os dados usando Local Storage ou Web SQL
-- Utilizar pré-processadores CSS
-
-Nós iremos avaliar a qualidade técnica do código CSS, HTML e Javascript além do aspecto visual e de usabilidade da aplicação.
-
-Envio da solução
--------------------------
-
-Você deverá criar um fork deste repositório, incluir o seu código fonte na pasta ``SRC``,  preencher o formulário "_about/Profile.md" e enviar para recruta.tech@nibo.com.br o link do seu fork.
-
-Tenha capricho com seu código e com o resultado final. Essa é a sua chance de entrar para o melhor time, na startup que mais cresce no Brasil.
-
-Tem alguma dúvida? Utilize o [canal de issues](https://github.com/nibodev/FrontendChallenge/labels/question) do Github para fazer sua pergunta :D
-
-**NIBO - Desenvolvimento de alta performance para geeks inquietos**
-
-Boa sorte :D
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
